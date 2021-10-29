@@ -1,1 +1,13 @@
 ROI Calculator
+Create ROI Calculator class and create 4 methods: income, expenses, cash fow, cash ROI
+.Each method will take inputs and store as variables
+
+myIncome
+.Please select 1 for estimated Total Income or select 2 fill itemized lists
+    If 1 input: estimate Total Income
+    If 2 input: Gross monthly RentalIncome
+                monthly Parking
+                Laundry Room
+                vending Machine
+        TOTAL :  sum of input2( rent,parking,laundry,vending machine)
+
