@@ -34,12 +34,15 @@ Select 1 for estimated Total Expenses or select 2 to fill itemized lists (for mo
 mylCashflow
 Total Cashflow = total of myIncome -(minus) total of myExpenses
 
-myROI
-        input:  Downpayment
+myInvestment
+Please add:     Downpayment
                 Closing cost
                 Total Rehab
         Total Investment = Sum of Downpayment,Closing cost,Rehab
-        
+
+
+
+myROI
         Annual Income = Total Cashflow * 12
 
         ROI (%) = Annual Income/Total Investment
