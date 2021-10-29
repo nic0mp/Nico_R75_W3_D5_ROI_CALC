@@ -3,11 +3,44 @@ Create ROI Calculator class and create 4 methods: income, expenses, cash fow, ca
 .Each method will take inputs and store as variables
 
 myIncome
-.Please select 1 for estimated Total Income or select 2 fill itemized lists
+Select 1 for estimated Total Income or select 2 fill itemized lists (for more accurate return)
     If 1 input: estimate Total Income
     If 2 input: Gross monthly RentalIncome
                 monthly Parking
                 Laundry Room
                 vending Machine
-        TOTAL :  sum of input2( rent,parking,laundry,vending machine)
+        TOTAL Income = sum of input2( rent,parking,laundry,vending machine)
+
+myExpenses
+Select 1 for estimated Total Expenses or select 2 to fill itemized lists (for more accurate return)
+    If 1 input: estimate Total Expenses(for more accurate return)
+    If 2 input: Taxes 
+                Insurance 
+                
+                UTILITIES:
+                    Power
+                    Gas/Heat
+                    Water/sewage
+
+                HOA fee (annual)
+                Lawn care/Landscaping
+                Repairs
+                vacancy
+                Capital Expenditure
+                Property Managing
+                Mortgage
+        Total : sum of all input for expenses
+
+mylCashflow
+Total Cashflow = total of myIncome -(minus) total of myExpenses
+
+myROI
+        input:  Downpayment
+                Closing cost
+                Total Rehab
+        Total Investment = Sum of Downpayment,Closing cost,Rehab
+        
+        Annual Income = Total Cashflow * 12
+
+        ROI (%) = Annual Income/Total Investment
 
