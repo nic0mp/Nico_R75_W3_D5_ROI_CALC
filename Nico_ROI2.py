@@ -1,21 +1,21 @@
 # ROI CALCULATOR
 class ROICalculator():
 
-    def __init__(self,cashflow=0): 
-        self.calcIncome = []
-        self.calcExpenses = []
-        self.calcInvestment = []
+    def __init__(self,calcIncome=0,calcExpenses=0,calcInvestment=0,cashflow=0): 
+        self.calcIncome = calcIncome
+        self.calcExpenses = calcExpenses
+        self.calcInvestment = calcInvestment
         self.cashflow = cashflow
 
     def myIncome(self):
         addIncome = int(input('What is your estimated Total Income?'))
-        self.calcIncome.append(addIncome)
+        self.calcIncome += addIncome
         print('Your Total Income is $', + sum(self.calcIncome))
         return sum(self.calcIncome)
 
     def myItemIncome(self):
         addIncome2 = int(input('Monthly Rental Income'))
-        self.calcIncome.append(addIncome2)
+        self.calcIncome += addIncome2
         addIncome3 = int(input('Monthly Parking ($0 if none)'))
         self.calcIncome.append(addIncome3)
         addIncome4 = int(input('Laundry Room ($0 if none)'))
@@ -65,13 +65,13 @@ class ROICalculator():
         addInvestment4 = int(input('What is your Total Rehab cost?'))
         self.calcInvestment.append(addInvestment4)
         print('Your Total Investment is $',+ sum(self.calcInvestment))
-        print( (sum(self.calcIncome)) - (sum(self.calcExpenses)))
-
-    # def myCashflow(self):
-    #     monthlyCashflow = self.calcIncome - self.calcExpenses
-    #     self.cashflow = monthlyCashflow
-    #     # print('Your Total Cashflow is $'+((sum(self.calcIncome)) - (sum(self.calcExpenses))))
-    #     print(monthlyCashflow)
+        
+        ROICalculator.myCashflow(self)
+    def myCashflow(self):
+        monthlyCashflow = self.calcIncome - self.calcExpenses
+        self.cashflow = monthlyCashflow
+        # print('Your Total Cashflow is $'+((sum(self.calcIncome)) - (sum(self.calcExpenses))))
+        print('monthlyCashflow')
 
 
 
@@ -99,7 +99,7 @@ def run():
         if chooseInvestment == '2':
             myROI.myItemInvestment()
 
-      
+        print(self.cashflow)
 
 
 run()
