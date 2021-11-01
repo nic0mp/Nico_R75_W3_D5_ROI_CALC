@@ -83,7 +83,9 @@ class ROICalculator():
     def myCOCROI(self):
         trueROI = float(((self.calcIncome - self.calcExpenses) * 12) / self.calcInvestment)
         # print(trueROI)
-        print(f'Your ROI is {trueROI}%')
+        percentage = "{:.0%}".format(trueROI)
+        # print(percentage)
+        print(f'Your ROI is {percentage}')
         
   
 
@@ -97,6 +99,7 @@ def run():
             myROI.myIncome()
         elif chooseIncome == '2':
             myROI.myItemIncome()
+            break
         elif chooseIncome.lower() == 'q':
             break
 
@@ -105,6 +108,7 @@ def run():
             myROI.myExpenses()
         if chooseExpense == '2':
             myROI.myItemExpenses()
+            break
         elif chooseExpense.lower() == 'q':
             break
 
