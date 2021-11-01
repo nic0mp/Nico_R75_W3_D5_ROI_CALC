@@ -65,13 +65,22 @@ class ROICalculator():
         addInvestment4 = int(input('What is your Total Rehab cost?'))
         self.calcInvestment.append(addInvestment4)
         print('Your Total Investment is $',+ sum(self.calcInvestment))
-        print( (sum(self.calcIncome)) - (sum(self.calcExpenses)))
+        # print( (sum(self.calcIncome)) - (sum(self.calcExpenses)))
+    
 
-    # def myCashflow(self):
-    #     monthlyCashflow = self.calcIncome - self.calcExpenses
-    #     self.cashflow = monthlyCashflow
-    #     # print('Your Total Cashflow is $'+((sum(self.calcIncome)) - (sum(self.calcExpenses))))
-    #     print(monthlyCashflow)
+    def myCashFlow(self):
+        for i in self.calcIncome:
+            counterIncome = 0
+            counterIncome += i
+
+        for x in self.calcExpenses:
+            counterExpense = 0
+            counterExpense += x
+
+        monthlyCashflow = (counterIncome - counterExpense)
+        # self.cashflow = monthlyCashflow
+        # print('Your Total Cashflow is $'+((sum(self.calcIncome)) - (sum(self.calcExpenses))))
+        print(monthlyCashflow)
 
 
 
@@ -81,11 +90,13 @@ myROI = ROICalculator()
 
 def run():
     while True:
-        chooseIncome = input('Provide Total Income \n 1. Estimated Total \n 2. Itemized Income')
+        chooseIncome = input('Provide Total Income \n 1. Estimated Total \n 2. Itemized Income \n Q. to quit')
         if chooseIncome.lower() == '1':
             myROI.myIncome()
         elif chooseIncome.lower() == '2':
             myROI.myItemIncome()
+        elif chooseIncome.lower() == 'q':
+            break
 
         chooseExpense = input('Provide your total Expense \n 1. Estimated Total Expense \n 2. Itemized Total Expense')
         if chooseExpense == '1':
@@ -99,6 +110,7 @@ def run():
         if chooseInvestment == '2':
             myROI.myItemInvestment()
 
+        myROI.myCashFlow()
       
 
 
