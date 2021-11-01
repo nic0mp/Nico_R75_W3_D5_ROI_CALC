@@ -10,7 +10,8 @@ class ROICalculator():
     def myIncome(self):
         addIncome = int(input('What is your estimated Total Income?'))
         self.calcIncome += addIncome
-        print(self.calcIncome)
+        # print(self.calcIncome)
+        print(f'Your Total Income is ${self.calcIncome}')
         
 
     def myItemIncome(self):
@@ -22,12 +23,14 @@ class ROICalculator():
         self.calcIncome += addIncome4
         addIncome5 = int(input('Vending Machine ($0 if none)'))
         self.calcIncome += addIncome5
-        print(self.calcIncome)
+        # print(self.calcIncome)
+        print(f'Your Total Income is ${self.calcIncome}')
   
     def myExpenses(self):
         addExpense = int(input('What is your estimated Total Expenses?'))
         self.calcExpenses += addExpense
-        print(self.calcExpenses)
+        # print(self.calcExpenses)
+        print(f'Your Total Expense is ${self.calcExpenses}')
 
     def myItemExpenses(self):
         addExpense2 = int(input('Mortgage'))
@@ -48,12 +51,14 @@ class ROICalculator():
         self.calcExpenses += addExpense9
         addExpense10 = int(input('Monthly Property Tax'))
         self.calcExpenses += addExpense10
-        print(self.calcExpenses)
+        # print(self.calcExpenses)
+        print(f'Your Total Expense is ${self.calcExpenses}')
 
     def myInvestment(self):
         addInvestment = int(input('What is your estimated Total Investment'))
         self.calcInvestment += addInvestment
-        print(self.calcInvestment)
+        # print(self.calcInvestment)
+        print(f'Your Total Investment is ${self.calcInvestment}')
 
     def myItemInvestment(self):
         addInvestment2 = int(input('What is your Down Payment?'))
@@ -62,19 +67,23 @@ class ROICalculator():
         self.calcInvestment += (addInvestment3)
         addInvestment4 = int(input('What is your Total Rehab cost?'))
         self.calcInvestment += (addInvestment4)
-        print(self.calcInvestment)
+        # print(self.calcInvestment)
+        print(f'Your Total Investment is ${self.calcInvestment}')
 
     def myCashFlow(self):
         monthlyCashflow = self.calcIncome - self.calcExpenses
-        print(monthlyCashflow)
+        # print(monthlyCashflow)
+        print(f'Your Total Cashflow is ${monthlyCashflow}')
 
     def myAnnualInc(self):
         annualIncome = (self.calcIncome - self.calcExpenses) * 12
-        print(annualIncome)
-
+        # print(annualIncome)
+        print(f'Your Annual Income is ${annualIncome}')
+        
     def myCOCROI(self):
         trueROI = float(((self.calcIncome - self.calcExpenses) * 12) / self.calcInvestment)
-        print(trueROI)
+        # print(trueROI)
+        print(f'Your ROI is {trueROI}%')
         
   
 
@@ -104,6 +113,7 @@ def run():
             myROI.myInvestment()
         if chooseInvestment == '2':
             myROI.myItemInvestment()
+            break
         elif chooseInvestment.lower() == 'q':
             break
 
