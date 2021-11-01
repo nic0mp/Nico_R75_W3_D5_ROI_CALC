@@ -10,7 +10,7 @@ class ROICalculator():
     def myIncome(self):
         addIncome = int(input('What is your estimated Total Income?'))
         self.calcIncome += addIncome
-        print('Your Total Income is $'(self.calcIncome))
+        print(self.calcIncome)
         
 
     def myItemIncome(self):
@@ -48,12 +48,12 @@ class ROICalculator():
         self.calcExpenses += addExpense9
         addExpense10 = int(input('Monthly Property Tax'))
         self.calcExpenses += addExpense10
-        print('Your Total Expense is $',+ sum(self.calcExpenses))
+        print(self.calcExpenses)
 
     def myInvestment(self):
         addInvestment = int(input('What is your estimated Total Investment'))
         self.calcInvestment += addInvestment
-        print('Your Total Investment is $',+ sum(self.calcInvestment))
+        print(self.calcInvestment)
 
     def myItemInvestment(self):
         addInvestment2 = int(input('What is your Down Payment?'))
@@ -62,40 +62,56 @@ class ROICalculator():
         self.calcInvestment += (addInvestment3)
         addInvestment4 = int(input('What is your Total Rehab cost?'))
         self.calcInvestment += (addInvestment4)
-        print('Your Total Investment is $',+ sum(self.calcInvestment))
+        print(self.calcInvestment)
+
+    def myCashFlow(self):
+        monthlyCashflow = self.calcIncome - self.calcExpenses
+        print(monthlyCashflow)
+
+    def myAnnualInc(self):
+        annualIncome = (self.calcIncome - self.calcExpenses) * 12
+        print(annualIncome)
+
+    def myCOCROI(self):
+        trueROI = ((self.calcIncome - self.calcExpenses) * 12) / self.calcInvestment
+        print(trueROI)
         
-    #     ROICalculator.myCashflow(self)
-    # def myCashflow(self):
-    #     monthlyCashflow = self.calcIncome - self.calcExpenses
-    #     self.cashflow = monthlyCashflow
-    #     # print('Your Total Cashflow is $'+((sum(self.calcIncome)) - (sum(self.calcExpenses))))
-    #     print('monthlyCashflow')
-
-
-
+  
 
 myROI = ROICalculator()
 # income.myIncome()
 
 def run():
     while True:
-        chooseIncome = input('Provide Total Income \n 1. Estimated Total \n 2. Itemized Income')
+        chooseIncome = input('What would you like to do? \n 1. Estimated Total \n 2. Itemized Income \n Q. to quit')
         if chooseIncome == '1':
             myROI.myIncome()
         elif chooseIncome == '2':
             myROI.myItemIncome()
+        elif chooseIncome.lower() == 'q':
+            break
 
-        chooseExpense = input('Provide your total Expense \n 1. Estimated Total Expense \n 2. Itemized Total Expense')
+        chooseExpense = input('What would you like to do? \n 1. Estimated Total Expense \n 2. Itemized Total Expense \n Q. to quit')
         if chooseExpense == '1':
             myROI.myExpenses()
         if chooseExpense == '2':
             myROI.myItemExpenses()
+        elif chooseExpense.lower() == 'q':
+            break
 
-        chooseInvestment = input('Provide your total Investment \n 1. Estimated Total Investment \n 2. Itemized Total Investment')
+        chooseInvestment = input('What would you like to do? \n 1. Estimated Total Investment \n 2. Itemized Total Investment \n Q. to quit')
         if chooseInvestment == '1':
             myROI.myInvestment()
         if chooseInvestment == '2':
             myROI.myItemInvestment()
+        elif chooseInvestment.lower() == 'q':
+            break
+
+        myROI.myCashFlow()
+
+        myROI.myAnnualInc()
+
+        # myROI.myCOCROI()
 
         # print(self.cashflow)
 

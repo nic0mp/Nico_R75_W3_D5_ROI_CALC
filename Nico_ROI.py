@@ -72,10 +72,12 @@ class ROICalculator():
         for i in self.calcIncome:
             counterIncome = 0
             counterIncome += i
+        
 
         for x in self.calcExpenses:
             counterExpense = 0
             counterExpense += x
+        
 
         monthlyCashflow = (counterIncome - counterExpense)
         # self.cashflow = monthlyCashflow
@@ -90,25 +92,30 @@ myROI = ROICalculator()
 
 def run():
     while True:
-        chooseIncome = input('Provide Total Income \n 1. Estimated Total \n 2. Itemized Income \n Q. to quit')
+        chooseIncome = input('What would you like to do? \n 1. Estimated Total \n 2. Itemized Income \n Q. to quit')
         if chooseIncome.lower() == '1':
             myROI.myIncome()
         elif chooseIncome.lower() == '2':
             myROI.myItemIncome()
         elif chooseIncome.lower() == 'q':
             break
+        
 
-        chooseExpense = input('Provide your total Expense \n 1. Estimated Total Expense \n 2. Itemized Total Expense')
+        chooseExpense = input('What would you like to do? \n 1. Estimated Total Expense \n 2. Itemized Total Expense \n Q. to quit')
         if chooseExpense == '1':
             myROI.myExpenses()
         if chooseExpense == '2':
             myROI.myItemExpenses()
+        elif chooseExpense.lower() == 'q':
+            break
 
-        chooseInvestment = input('Provide your total Investment \n 1. Estimated Total Investment \n 2. Itemized Total Investment')
+        chooseInvestment = input('What would you like to do? \n 1. Estimated Total Investment \n 2. Itemized Total Investment \n Q. to quit')
         if chooseInvestment == '1':
             myROI.myInvestment()
         if chooseInvestment == '2':
             myROI.myItemInvestment()
+        elif chooseInvestment.lower() == 'q':
+            break
 
         myROI.myCashFlow()
       
