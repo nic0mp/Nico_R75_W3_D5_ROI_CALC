@@ -73,7 +73,7 @@ class ROICalculator():
         print(annualIncome)
 
     def myCOCROI(self):
-        trueROI = ((self.calcIncome - self.calcExpenses) * 12) / self.calcInvestment
+        trueROI = float(((self.calcIncome - self.calcExpenses) * 12) / self.calcInvestment)
         print(trueROI)
         
   
@@ -111,7 +111,7 @@ def run():
 
         myROI.myAnnualInc()
 
-        # myROI.myCOCROI()
+        myROI.myCOCROI()
 
         # print(self.cashflow)
 
